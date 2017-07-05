@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">AppLib</string>
     <string name="error">很抱歉,程序出现异常,即将退出</string>
+    <color name="text_content">#de000000</color>
+    <color name="line_background">#26000000</color>
+    <color name="text_title">#8a000000</color>
+    <color name="text_hint_tint">#61000000</color>
 
 </resources>
