@@ -1,0 +1,13 @@
+# AppLib
+## 基类
+## 帮助类
+## 加密类
+## 工具类
+## 自定义控件
+## 第三方框架
+### 数据库----Litepal
+### 网络请求----okhttp3
+### 事件处理----EventBus
+### view注释----butterknife
+### 权限检测----hipermission
+### 图片处理----fresco
