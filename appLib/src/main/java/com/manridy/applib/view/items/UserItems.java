@@ -35,7 +35,7 @@ public class UserItems extends RelativeLayout {
         userHint = (TextView) view.findViewById(R.id.tv_user_hint);
         userText = (TextView) view.findViewById(R.id.tv_user_text);
         ImageView userArrows = (ImageView) view.findViewById(R.id.iv_user_arrows);
-        TypedArray typedArray = context.obtainStyledAttributes(attrs,R.styleable.HelpItems);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs,R.styleable.UnitItems);
         int colorHint = typedArray.getColor(R.styleable.UserItems_user_hint_color,-1);
         int colorText = typedArray.getColor(R.styleable.UserItems_user_text_color,-1);
         int colorBackground = typedArray.getColor(R.styleable.UserItems_user_background,-1);

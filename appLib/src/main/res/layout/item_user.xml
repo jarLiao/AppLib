@@ -51,6 +51,5 @@
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@id/iv_user_arrows"
         android:textColor="#8a000000"
-        android:textSize="10sp"
-        android:text="Mark"/>
+        android:textSize="10sp"/>
 </RelativeLayout>
