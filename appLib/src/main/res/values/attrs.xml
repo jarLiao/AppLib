@@ -72,6 +72,14 @@
         <attr name="data" format="string"/>
     </declare-styleable>
 
+    <declare-styleable name="UserItems">
+        <attr name="user_hint" format="string"/>
+        <attr name="user_text" format="string"/>
+        <attr name="user_hint_color" format="color"/>
+        <attr name="user_text_color" format="color"/>
+        <attr name="user_background" format="color"/>
+    </declare-styleable>
+
     <declare-styleable name="CircularView">
         <attr name="cv_progress" format="float"/>
         <attr name="cv_progressbar_color" format="color"/>

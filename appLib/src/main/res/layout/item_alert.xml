@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp">
+                android:background="#ffffff">
 
     <TextView
         android:id="@+id/tv_menu_name"
@@ -11,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:textColor="@color/text_content"
+        android:layout_marginLeft="16dp"
         android:textSize="16sp"
         android:text="开始久坐提醒"/>
 
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="4dp"
+        android:layout_marginRight="16dp"
         android:src="@mipmap/ic_chevron_right"/>
 
     <TextView
@@ -38,5 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:background="#26000000"/>
 </RelativeLayout>

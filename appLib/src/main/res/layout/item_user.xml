@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:background="#ffffff"
-                android:id="@+id/rl_menu_view">
+                android:background="#ffffff">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1px"
@@ -12,28 +12,31 @@
         android:layout_marginRight="16dp"
         android:background="#26000000"/>
 
-    <ImageView
-        android:id="@+id/iv_menu_icon"
+    <TextView
+        android:id="@+id/tv_user_hint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginLeft="16dp"
-        android:src="@mipmap/set_interface"/>
-
-    <TextView
-        android:id="@+id/tv_menu_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/iv_menu_icon"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="18dp"
         android:textColor="#de000000"
         android:textSize="16sp"
-        android:text="界面选择"/>
+        android:text="姓名"/>
+
+
+    <TextView
+        android:id="@+id/tv_user_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/text_title"
+        android:textSize="12sp"
+        android:text="v1.1.2"
+        android:visibility="gone"/>
+
 
 
     <ImageView
-        android:id="@+id/iv_menu_check"
+        android:id="@+id/iv_user_arrows"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -41,6 +44,13 @@
         android:layout_marginRight="16dp"
         android:src="@mipmap/ic_chevron_right"/>
 
-
-
+    <TextView
+        android:id="@+id/tv_user_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/iv_user_arrows"
+        android:textColor="#8a000000"
+        android:textSize="10sp"
+        android:text="Mark"/>
 </RelativeLayout>
