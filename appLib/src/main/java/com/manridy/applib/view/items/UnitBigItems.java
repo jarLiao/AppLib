@@ -35,7 +35,7 @@ public class UnitBigItems extends RelativeLayout {
         View view = View.inflate(context, R.layout.item_unit_big,this);
         menuIcon = (ImageView) view.findViewById(R.id.iv_unit_img);
         menuName = (TextView) view.findViewById(R.id.tv_unit_text);
-        menuHint = (TextView) view.findViewById(R.id.tv_unit_hints);
+        menuHint = (TextView) view.findViewById(R.id.tv_unit_readme);
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs,R.styleable.UnitBigItems);
         String name = typedArray.getString(R.styleable.UnitBigItems_unit_big_text);
