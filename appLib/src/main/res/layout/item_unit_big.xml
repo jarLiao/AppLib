@@ -24,7 +24,7 @@
         android:src="@mipmap/ic_radiobuttonoff"/>
 
     <TextView
-        android:id="@+id/tv_unit_hint"
+        android:id="@+id/tv_unit_hints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_unit_text"
