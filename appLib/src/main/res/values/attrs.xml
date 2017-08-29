@@ -30,6 +30,12 @@
         <attr name="unit_select" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="UnitBigItems">
+        <attr name="unit_big_text" format="string"/>
+        <attr name="unit_big_select" format="boolean"/>
+        <attr name="unit_big_hint" format="string"/>
+    </declare-styleable>
+
     <declare-styleable name="HelpItems">
         <attr name="help_name" format="string"/>
         <attr name="help_name_color" format="color"/>
