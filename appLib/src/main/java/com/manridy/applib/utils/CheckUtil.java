@@ -4,6 +4,8 @@ import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.location.LocationManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 
 import java.util.List;
 
@@ -144,7 +146,11 @@ public class CheckUtil {
         return false;
     }
 
-
+    /**
+     * GPS是否开启
+     * @param context
+     * @return
+     */
     public static boolean isGpsEnable(final Context context) {
         LocationManager locationManager
                 = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
@@ -157,51 +163,10 @@ public class CheckUtil {
     }
 
     /**
-     * 厘米转英寸
-     * @param cm
+     * 检测是否是蓝牙地址
+     * @param address
      * @return
      */
-    public static int cmToIn(double cm){
-       int in = (int) Math.round(cm * 0.3937);
-        return in ;
-    }
-
-    /**
-     * 英寸转厘米
-     * @param in
-     * @return
-     */
-    public static int inToCm(double in){
-        return (int) (in / 0.3937);
-    }
-
-    /**
-     * 千米转英里
-     * @param km
-     * @return
-     */
-    public static float kmToMi(double km){
-        return (float)(km * 0.6214);
-    }
-
-    /**
-     * 千克转磅
-     * @param kg
-     * @return
-     */
-    public static int kgToLb(double kg){
-        return (int) Math.round(kg * 2.205);
-    }
-
-    /**
-     * 磅转千克
-     * @param lb
-     * @return
-     */
-    public static int lbToKg(double lb){
-        return (int) (lb / 2.205);
-    }
-
     public static boolean checkBluetoothAddress(String address) {
         int ADDRESS_LENGTH = 17;
         if (address == null || address.length() != ADDRESS_LENGTH) {
@@ -225,5 +190,37 @@ public class CheckUtil {
             }
         }
         return true;
+    }
+
+    public static boolean checkFilter(String deviceName,String[] filters){
+        for (String filter : filters) {
+            if (deviceName.contains(filter)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 检测当的网络（WLAN、3G/2G）状态
+     * @param context Context
+     * @return true 表示网络可用
+     */
+    public static boolean isNetworkAvailable(Context context) {
+        ConnectivityManager connectivity = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivity != null) {
+            NetworkInfo info = connectivity.getActiveNetworkInfo();
+            if (info != null && info.isConnected())
+            {
+                // 当前网络是连接的
+                if (info.getState() == NetworkInfo.State.CONNECTED)
+                {
+                    // 当前所连接的网络可用
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

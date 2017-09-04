@@ -40,7 +40,7 @@ public class LogUtil {
         if (LOGE) { Log.e(tag, mess); }
 //        print2File(tag, mess);
     }
-    public static final String LOG_FILE_PATH = "/iwaerLog.txt";
+    public static final String LOG_FILE_PATH = "/Log.txt";
     private synchronized static void print2File(final String tag, final String msg) {
         Date now = new Date();
         String date = new SimpleDateFormat("MM-dd", Locale.getDefault()).format(now);

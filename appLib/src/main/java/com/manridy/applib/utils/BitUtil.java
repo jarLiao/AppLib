@@ -297,6 +297,11 @@ public class BitUtil {
         };
     }
 
+    /**
+     * byes数组转long
+     * @param b
+     * @return
+     */
     public static long bytesToLong(byte[] b){
         StringBuffer temp = new StringBuffer();
         for (int i = 0; i < b.length; i++) {
@@ -306,8 +311,7 @@ public class BitUtil {
     }
 
     /**
-     * @Title: parseByte2HexStr
-     * @Description: byte转换成16进制
+     *  byte转换成16进制字符串
      * @param @param buf
      * @param @return 设定文件
      * @return String 返回类型
@@ -326,8 +330,7 @@ public class BitUtil {
     }
 
     /**
-     * @Title: parseHexStr2Byte
-     * @Description: 十六进制转换成byte
+     * 十六进制字符串转换成byte
      * @param @param hexStr
      * @param @return 设定文件
      * @return byte[] 返回类型

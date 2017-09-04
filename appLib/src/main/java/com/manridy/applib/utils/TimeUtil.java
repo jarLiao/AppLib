@@ -3,6 +3,7 @@ package com.manridy.applib.utils;
 
 import android.annotation.SuppressLint;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -316,8 +317,60 @@ public class TimeUtil {
         return str;
     }
 
+    /**
+     * 得到时间字符串的小时和分钟数值
+     * @param time 20:00
+     * @return [20][00]
+     */
+    private int[] getHourTimeInt(String time) {
+        String[] times = time.split(":");
+        int[] ints = new int[times.length];
+        for (int i = 0; i < times.length; i++) {
+            ints[i] = Integer.parseInt(times[i]);
+        }
+        return ints;
+    }
+
+    private String checkTime(String start, String end) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+        String result = null;
+        try {
+            Date startTime = dateFormat.parse(start);
+            Date endTime = dateFormat.parse(end);
+            if (startTime.after(endTime)) {
+                result = "开始时间不能晚于结束时间";
+                return result;
+            }
+            if (endTime.before(startTime)) {
+                result = "结束时间不能早于结束时间";
+                return result;
+            }
+            if (endTime.getTime() - startTime.getTime() < 60 * 60 * 1000) {
+                result = "请设置至少一小时";
+                return result;
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
     public static double getHourDouble(int time){
         String str =  String .format("%.1f", ((double)time/60));
         return Double.valueOf(str);
+    }
+
+    public static String getCalculateDay(String day,int num){
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Date date = dateFormat.parse(day);
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(date);
+            calendar.add(Calendar.DAY_OF_MONTH,num);
+            return dateFormat.format(calendar.getTime());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

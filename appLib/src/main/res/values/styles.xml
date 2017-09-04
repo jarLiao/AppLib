@@ -11,4 +11,6 @@
     <attr name="DialogTitleColor" format="color"/>
     <attr name="DialogMenuColor" format="color"/>
 
+    <style name="ToolBarButton" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation"/>
+
 </resources>

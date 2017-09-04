@@ -47,7 +47,7 @@ public class AlertBigItems extends RelativeLayout {
         typedArray.recycle();
     }
     public void setAlertCheck(boolean check) {
-        alertImg.setImageResource(check?R.mipmap.ic_on:R.mipmap.ic_off);
+        alertImg.setImageResource(check?R.mipmap.all_switchon:R.mipmap.all_switchoff);
     }
 
 }

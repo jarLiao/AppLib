@@ -208,6 +208,12 @@ public class BitmapUtil {
         return intent;
     }
 
+    /**
+     * 得到图片地址的uri
+     * @param context
+     * @param imageFile
+     * @return
+     */
     public static Uri getImageContentUri(Context context, File imageFile) {
         String filePath = imageFile.getAbsolutePath();
         Cursor cursor = context.getContentResolver().query(
